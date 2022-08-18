@@ -1,0 +1,65 @@
+<?php
+$error=false;
+        $showAlert=true;
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        
+        include 'dbconnect.html';
+        $username= $_POST["name"];
+        $email= $_POST["email"];
+        $phone= $_POST["phone"];
+        $password= $_POST["pass"];
+        $exists=false;
+        if($exists==false){
+            $sql="INSERT INTO `signup`(`Name`, `Email`, `Phone`, `Password`) VALUES ('$username','$email','$phone','$password')";
+            $result=mysqli_query($conn,$sql);
+            if($result){
+                $error=true;
+            }
+            else{
+                $showAlert= "Try with different username";
+            }
+        }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="center">
+      <h1>Login</h1>
+      <form method="post" action="signup.html">
+        <label>Enter your name</label>
+          <div class="txt_field">
+            <input type="text" required name="name">
+            <span></span>
+          </div>
+        <label>Enter your email</label>
+          <div class="txt_field">
+           <input type="text" required name="email">
+            <span></span>
+          </div>
+        <label>Enter your phone number</label>
+          <div class="txt_field">
+            <input type="text" required name="phone">
+            <span></span>
+          </div>
+        <label>Password</label>
+          <div class="txt_field">
+            <input type="password" required name="pass">
+            <span></span>
+          </div>
+          <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+              <div class="signup_link">
+                Already a member? <a href="login.html">login</a>
+              </div>
+        </form>
+    </div>
+  </body>
+</html>

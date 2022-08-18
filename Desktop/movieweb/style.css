@@ -1,0 +1,202 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+} */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.back {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(12, 2, 51, 0.3), rgba(12, 2, 51, 0.3));
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 70px;
+  padding: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+}
+nav ul li :hover {
+  color: black;
+}
+.head {
+  text-align: center;
+}
+.head h1 {
+  font-size: 80px;
+  color: white;
+  font-weight: 600;
+}
+span {
+  color: rgb(122, 13, 13);
+}
+.head a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-size: 24px;
+  padding: 10px 7px;
+}
+.head button {
+  background: black;
+  border-radius: 20px;
+  
+}
+button :hover {
+  color: rgb(0, 123, 255);
+}
+.row {
+  background: black;
+}
+.backvideo {
+  background: fixed;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* //movies list box// */
+img {
+  width: 230px;
+  height: 320px;
+}
+.movielist {
+  background: black;
+  color: rgb(200, 200, 200);
+  text-align: center;
+  overflow: hidden;
+}
+.movielist h2 {
+  padding-top: 20px;
+}
+.movielist .row {
+  margin-top: 20px;
+}
+.row img {
+  border: 2px solid white;
+  border-radius: 20px;
+}
+ img :hover{
+  transform:scale(1.2);
+}
+.row a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.row a:hover {
+  color: rgb(14, 191, 255);
+  
+}
+/* //hiting details and video */
+.tophit{
+  background: black;
+  width: 100%;
+  height: 900px;
+}
+.details{
+  float: left;
+  width: 50%;
+}
+.details h2{
+  padding-top: 120px;
+  padding-left: 70px;
+  color: rgb(193, 193, 193);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 30px;
+}
+.details p{
+  padding-top: 10px;
+  padding-left: 70px;
+  color: rgb(163, 163, 163);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+}
+.videotophit{
+  width: 50%;
+  float: right;
+  margin-top: 100px;
+  border: 1px solid white;
+  border-radius: 45px;
+  padding-left: 100px;
+  
+}
+
+
+
+
+
+
+.searchletter{
+  background: black;
+  width: 100%;
+  height: 100%;
+}
+.searchletter h2{
+  margin-left: 700px;
+  padding-top: 640px;
+  color: rgb(181, 177, 177);
+  
+
+}
+.searchletter p{
+  text-align: center;
+  color: rgb(152, 152, 151);
+  margin-top: 5px;
+  
+}
+.searchletter input{
+  width: 400px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  margin-left: 550px;
+  margin-top: 30px;
+}
+
+.searchletter button{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.searchletter button:hover{
+  background-color: rgb(4, 4, 4);
+  color: rgb(255, 255, 255);
+  border-color: brown;
+  border: 3px solid brown;
+}
